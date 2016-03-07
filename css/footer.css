@@ -1,0 +1,51 @@
+/*
+* @Author: Administrator
+* @Date:   2016-03-06 23:22:24
+* @Last Modified by:   Administrator
+* @Last Modified time: 2016-03-07 00:09:48
+*/
+
+.demo {
+  width: 1030px;
+  margin: 50px auto;
+}
+
+.list {
+  border-radius: 15px;
+  overflow: hidden;
+  width: 300px;
+  height: 200px;
+  float: left;
+  margin: 20px;
+  position: relative;
+}
+
+.list div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: rotate(-100deg);
+  transform-origin: top left;
+  /* 旋转中心点*/
+  transition: transform .8s;
+}
+
+.current div {
+  transform: rotate(0deg);
+}
+
+.list div.top {
+  transform-origin: top left;
+}
+
+.list div.right {
+  transform-origin: top right;
+}
+
+.list div.bottom {
+  transform-origin: bottom right;
+}
+
+.list div.left {
+  transform-origin: bottom left;
+}

@@ -1,0 +1,116 @@
+/*
+* @Author: Administrator
+* @Date:   2016-03-06 23:19:08
+* @Last Modified by:   Administrator
+* @Last Modified time: 2016-03-06 23:47:28
+*/
+
+* {
+  margin: 0px;
+  padding: 0;
+}
+
+body {
+  background: url("../images/17.jpg");
+  -webkit-background-size: cover;
+  background-size: cover;
+  ;
+  overflow: hidden;
+}
+
+.housing {
+  width: 235px;
+  height: 235px;
+  position: absolute;
+  bottom: 190px;
+  right: 0;
+  left: 0;
+  margin: auto;
+  perspective: 1000px;
+  /*视距*/
+}
+
+.housing .scene {
+  transform-style: preserve-3D;
+  /*子元素为3d模式*/
+  width: 240px;
+  height: 240px;
+  transform-origin: 50%;
+  /* 设置旋转的中心点*/
+  float: left;
+  margin-right: 60px;
+  -webkit-animation: slide 18s linear infinite;
+  animation: slide 18s linear infinite;
+}
+
+.housing .scene ul li {
+  list-style: none;
+  width: 260px;
+  height: 390px;
+  border: 5px solid #FE98D9;
+  position: absolute;
+}
+
+.housing .scene ul li img {
+  width: 260px;
+  height: 390px;
+}
+
+.housing .scene ul li:nth-child(1) {
+  transform: rotateY(0deg) translateZ(300px);
+}
+
+.housing .scene ul li:nth-child(2) {
+  transform: rotateY(60deg) translateZ(300px);
+}
+
+.housing .scene ul li:nth-child(3) {
+  transform: rotateY(120deg) translateZ(300px);
+}
+
+.housing .scene ul li:nth-child(4) {
+  transform: rotateY(180deg) translateZ(300px);
+}
+
+.housing .scene ul li:nth-child(5) {
+  transform: rotateY(240deg) translateZ(300px);
+}
+
+.housing .scene ul li:nth-child(6) {
+  transform: rotateY(300deg) translateZ(300px);
+}
+
+
+/*CSS3动画开始*/
+
+@-webkit-keyframes slide {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}
+
+@keyframes slide {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}
+
+.housing .scene:hover {
+  -webkit-animation-play-state: paused;
+  animation-play-state: paused;
+}
+
+.housing .scene li:hover img {
+  transform: scale(1.2);
+  border: 5px solid rgba(255, 255, 255, 0.5)
+}
+
+audio {
+  display: none;
+}
